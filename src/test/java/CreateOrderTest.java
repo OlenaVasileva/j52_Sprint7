@@ -1,4 +1,5 @@
 import edu.praktikum.sprint7.client.ApiClient;
+import edu.praktikum.sprint7.model.CourierLoginResponse;
 import edu.praktikum.sprint7.model.CreateOrderResponse;
 import edu.praktikum.sprint7.model.Order;
 import io.qameta.allure.Description;
@@ -28,7 +29,7 @@ public class CreateOrderTest {
         Order order = new Order( firstName, lastName, address, metroStation, phone, deliveryDate, rentTime, comment, colors);
         Response response = apiClient.createOrderStep(order);
         assertEquals(201, response.statusCode());
-        response.as(CreateOrderResponse.class).getTrack();
+        track = response.as(CreateOrderResponse.class).getTrack();
 
     }
     private static Stream<Arguments> argumentsForCreateOrderTest() {

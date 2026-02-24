@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NegativCreateTest {
     private ApiClient apiClient = new ApiClient();
-    private String id;
+
 
 
     @Test
